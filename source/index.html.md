@@ -308,7 +308,7 @@ request = r = requests.post('https://api.4dsphere.com/geo/runway-boundary', data
 curl -H "Content-Type: application/json" -X POST -d '{"runwayData": {"width": 200, points: ...}' https://api.4dsphere.com/geo/runway-boundary
 ```
 
-> The above command returns SON object structured like this:
+> The above command returns JSON object structured like this:
 
 ```json
 {
@@ -381,6 +381,14 @@ This endpoint returns a GeoJSON polygon that represents and runway boundary.
 ### HTTP Request
 
 `POST https://api.4dsphere.com/geo/runway-boundary`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+width | Runway width in feet. 
+points | WGS-84 GeoJSON Multipoint object containing the runway start and end point.
+
 
 <aside class="warning">
 This endpoint is rate limited. A large number of requests over a short time span will return a 429 response "Too Many requests"
