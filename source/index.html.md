@@ -33,11 +33,11 @@ Authentication is not required to issue GET requests. All POST, PUT and PATCH re
 ```python
 import requests
 
-request = requests.get('http://api.4dsphere.com/airport-list')
+request = requests.get('https://api.4dsphere.com/airport-list')
 ```
 
 ```shell
-curl "http://api.4dsphere.com/airport-list"
+curl "https://api.4dsphere.com/airport-list"
 ```
 
 > The above command returns JSON structured like this:
@@ -57,7 +57,7 @@ This endpoint retrieves all airport IDs in the database.
 
 ### HTTP Request
 
-`GET http://api.4dsphere.com/airport-list`
+`GET https://api.4dsphere.com/airport-list`
 
 <aside class="warning">
 This endpoint is rate limited. A large number of requests over a short time span will return a 429 response "Too Many requests"
@@ -68,11 +68,11 @@ This endpoint is rate limited. A large number of requests over a short time span
 ```python
 import requests
 
-request = requests.get('http://api.4dsphere.com/nav-json/AH_0000001')
+request = requests.get('https://api.4dsphere.com/nav-json/AH_0000001')
 ```
 
 ```shell
-curl "http://api.4dsphere.com/nav-json/AH_0000001"
+curl "https://api.4dsphere.com/nav-json/AH_0000001"
 ```
 
 > The above command returns JSON structured like this:
@@ -106,7 +106,7 @@ This endpoint retrieves a specific airport, returning data in JSON format.
 
 ### HTTP Request
 
-`GET http://api.4dsphere.com/nav-json/<ID>`
+`GET https://api.4dsphere.com/nav-json/<ID>`
 
 ### URL Parameters
 
@@ -121,11 +121,11 @@ ID | The ID of the airport to retrieve
 ```python
 import requests
 
-request = requests.get('http://api.4dsphere.com/nav-aixm/AH_0000001')
+request = requests.get('https://api.4dsphere.com/nav-aixm/AH_0000001')
 ```
 
 ```shell
-curl "http://api.4dsphere.com/nav-aixm/AH_0000001"
+curl "https://api.4dsphere.com/nav-aixm/AH_0000001"
 ```
 
 > The above command returns AIXM structured like this:
@@ -155,7 +155,7 @@ This endpoint retrieves a specific airport, returning data in AIXM format.
 
 ### HTTP Request
 
-`GET http://api.4dsphere.com/nav-aixm/<ID>`
+`GET https://api.4dsphere.com/nav-aixm/<ID>`
 
 ### URL Parameters
 
@@ -402,11 +402,11 @@ This endpoint is rate limited. A large number of requests over a short time span
 ```python
 import requests
 
-request = requests.get('http://api.4dsphere.com/nav-query/KDFW')
+request = requests.get('https://api.4dsphere.com/nav-query/KDFW')
 ```
 
 ```shell
-curl "http://api.4dsphere.com/nav-query/KDFW"
+curl "https://api.4dsphere.com/nav-query/KDFW"
 ```
 
 > The above command returns JSON structured like this:
@@ -433,7 +433,7 @@ This endpoint retrieves airport whose attributes (ICAO, IATA, Name or City) matc
 
 ### HTTP Request
 
-`GET http://api.4dsphere.com/nav-query/<PARAM>`
+`GET https://api.4dsphere.com/nav-query/<PARAM>`
 
 ### URL Parameters
 
