@@ -32,12 +32,11 @@ Authentication is not required to issue GET requests. All POST, PUT and PATCH re
 
 ```python
 import requests
-
-request = requests.get('https://api.4dsphere.com/airport-list')
+request = requests.get('https://c6x6k93y3c.execute-api.us-east-1.amazonaws.com/prod/airport-list')
 ```
 
 ```shell
-curl "https://api.4dsphere.com/airport-list"
+curl "https://c6x6k93y3c.execute-api.us-east-1.amazonaws.com/prod/airport-list"
 ```
 
 > The above command returns JSON structured like this:
@@ -57,7 +56,7 @@ This endpoint retrieves all airport IDs in the database.
 
 ### HTTP Request
 
-`GET https://api.4dsphere.com/airport-list`
+`GET https://c6x6k93y3c.execute-api.us-east-1.amazonaws.com/prod/airport-list`
 
 <aside class="warning">
 This endpoint is rate limited. A large number of requests over a short time span will return a 429 response "Too Many requests"
@@ -68,11 +67,11 @@ This endpoint is rate limited. A large number of requests over a short time span
 ```python
 import requests
 
-request = requests.get('https://api.4dsphere.com/nav-json/AH_0000001')
+request = requests.get('https://c6x6k93y3c.execute-api.us-east-1.amazonaws.com/prod/nav-json/AH_0000001')
 ```
 
 ```shell
-curl "https://api.4dsphere.com/nav-json/AH_0000001"
+curl "https://c6x6k93y3c.execute-api.us-east-1.amazonaws.com/prod/nav-json/AH_0000001"
 ```
 
 > The above command returns JSON structured like this:
@@ -106,7 +105,7 @@ This endpoint retrieves a specific airport, returning data in JSON format.
 
 ### HTTP Request
 
-`GET https://api.4dsphere.com/nav-json/<ID>`
+`GET https://c6x6k93y3c.execute-api.us-east-1.amazonaws.com/prod/nav-json/<ID>`
 
 ### URL Parameters
 
@@ -121,11 +120,11 @@ ID | The ID of the airport to retrieve
 ```python
 import requests
 
-request = requests.get('https://api.4dsphere.com/nav-aixm/AH_0000001')
+request = requests.get('https://c6x6k93y3c.execute-api.us-east-1.amazonaws.com/prod/nav-aixm/AH_0000001')
 ```
 
 ```shell
-curl "https://api.4dsphere.com/nav-aixm/AH_0000001"
+curl "https://c6x6k93y3c.execute-api.us-east-1.amazonaws.com/prod/nav-aixm/AH_0000001"
 ```
 
 > The above command returns AIXM structured like this:
@@ -155,7 +154,7 @@ This endpoint retrieves a specific airport, returning data in AIXM format.
 
 ### HTTP Request
 
-`GET https://api.4dsphere.com/nav-aixm/<ID>`
+`GET https://c6x6k93y3c.execute-api.us-east-1.amazonaws.com/prod/nav-aixm/<ID>`
 
 ### URL Parameters
 
@@ -180,11 +179,11 @@ data = {
     }
 }
 
-request = r = requests.post('https://api.4dsphere.com/geo/inverse', data=data)
+request = r = requests.post('https://c6x6k93y3c.execute-api.us-east-1.amazonaws.com/prod/geo/inverse', data=data)
 ```
 
 ```shell
-curl -H "Content-Type: application/json" -X POST -d '{"points": {"type": MultiPoint, coordinates: ...}' https://api.4dsphere.com/geo/inverse
+curl -H "Content-Type: application/json" -X POST -d '{"points": {"type": MultiPoint, coordinates: ...}' https://c6x6k93y3c.execute-api.us-east-1.amazonaws.com/prod/geo/inverse
 ```
 
 > The above command returns JSON structured like this:
@@ -210,7 +209,7 @@ This endpoint calculates the geodetic distance and azimuth between two points. C
 
 ### HTTP Request
 
-`POST https://api.4dsphere.com/geo/inverse`
+`POST https://c6x6k93y3c.execute-api.us-east-1.amazonaws.com/prod/geo/inverse`
 
 ### URL Parameters
 
@@ -234,11 +233,11 @@ import requests
   "distance": 20000
 }
 }
-request = r = requests.post('https://api.4dsphere.com/geo/direct', data=data)
+request = r = requests.post('https://c6x6k93y3c.execute-api.us-east-1.amazonaws.com/prod/geo/direct', data=data)
 ```
 
 ```shell
-curl -H "Content-Type: application/json" -X POST -d '{"vector": {"type": point, coordinates: ...}' https://api.4dsphere.com/geo/direct
+curl -H "Content-Type: application/json" -X POST -d '{"vector": {"type": point, coordinates: ...}' https://c6x6k93y3c.execute-api.us-east-1.amazonaws.com/prod/geo/direct
 ```
 
 > The above command returns JSON structured like this:
@@ -273,7 +272,7 @@ This endpoint calculates the geodetic distance and azimuth between two points. C
 
 ### HTTP Request
 
-`POST https://api.4dsphere.com/geo/inverse`
+`POST https://c6x6k93y3c.execute-api.us-east-1.amazonaws.com/prod/geo/inverse`
 
 ### URL Parameters
 
@@ -301,11 +300,11 @@ data = {
   }
 }
 
-request = r = requests.post('https://api.4dsphere.com/geo/runway-boundary', data=data)
+request = r = requests.post('https://c6x6k93y3c.execute-api.us-east-1.amazonaws.com/prod/geo/runway-boundary', data=data)
 ```
 
 ```shell
-curl -H "Content-Type: application/json" -X POST -d '{"runwayData": {"width": 200, points: ...}' https://api.4dsphere.com/geo/runway-boundary
+curl -H "Content-Type: application/json" -X POST -d '{"runwayData": {"width": 200, points: ...}' https://c6x6k93y3c.execute-api.us-east-1.amazonaws.com/prod/geo/runway-boundary
 ```
 
 > The above command returns JSON object structured like this:
@@ -380,7 +379,7 @@ This endpoint returns a GeoJSON polygon that represents and runway boundary.
 
 ### HTTP Request
 
-`POST https://api.4dsphere.com/geo/runway-boundary`
+`POST https://c6x6k93y3c.execute-api.us-east-1.amazonaws.com/prod/geo/runway-boundary`
 
 ### URL Parameters
 
@@ -402,11 +401,11 @@ This endpoint is rate limited. A large number of requests over a short time span
 ```python
 import requests
 
-request = requests.get('https://api.4dsphere.com/nav-query/KDFW')
+request = requests.get('https://c6x6k93y3c.execute-api.us-east-1.amazonaws.com/prod/nav-query/KDFW')
 ```
 
 ```shell
-curl "https://api.4dsphere.com/nav-query/KDFW"
+curl "https://c6x6k93y3c.execute-api.us-east-1.amazonaws.com/prod/nav-query/KDFW"
 ```
 
 > The above command returns JSON structured like this:
@@ -433,7 +432,7 @@ This endpoint retrieves airport whose attributes (ICAO, IATA, Name or City) matc
 
 ### HTTP Request
 
-`GET https://api.4dsphere.com/nav-query/<PARAM>`
+`GET https://c6x6k93y3c.execute-api.us-east-1.amazonaws.com/prod/nav-query/<PARAM>`
 
 ### URL Parameters
 
